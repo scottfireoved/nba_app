@@ -9,7 +9,7 @@ const Header = (props) => {
     const logo = () => {
         return (
             <Link to="/" className="style.logo">
-                <img alt="NBA Logo" src="/images/nba_logo.png"/>
+                <img alt="NBA Logo" src="/images/nba_logo.png" />
             </Link>
         );
     }
@@ -17,25 +17,25 @@ const Header = (props) => {
     const navBars = () => {
         return (
             <div className={style.bars}>
-                <FontAwesome name="bars" 
-                onClick={props.onOpenNav}
-                style={{
-                    color: '#dfdfdf',
-                    padding: '10px',
-                    cursor: 'pointer'
-                }}/>
+                <FontAwesome name="bars"
+                    onClick={props.onOpenNav}
+                    style={{
+                        color: '#dfdfdf',
+                        padding: '10px',
+                        cursor: 'pointer'
+                    }} />
             </div>
         );
     }
 
     return (
-      <header className={style.header}>
-      <SideNav {...props}/>
+        <header className={style.header}>
+            <SideNav {...props} />
             <div className={style.headerOpt}>
                 {navBars()}
                 {logo()}
             </div>
-      </header>
+        </header>
     )
 };
 

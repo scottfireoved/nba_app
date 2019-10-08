@@ -13,7 +13,8 @@ const SliderTemplates = (props) => {
         arrows: false,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        ...props.settings //overrides any settings that match
     }
 
     switch (props.type) {
@@ -35,6 +36,8 @@ const SliderTemplates = (props) => {
                     </div>
                 )
             })
+            break;
+        case ('other'):
             break;
         default:
             template = null;

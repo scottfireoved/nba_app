@@ -1,6 +1,7 @@
 import React from 'react';
 import NewsSlider from '../widgets/NewSlider/slider';
 import NewsList from '../widgets/NewsList/newsList';
+import VideosList from '../widgets/VideosList/videosList';
 const Home = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Home = () => {
         loadmore={true}
         start={3}
         amount={3} />
+      <VideosList />
     </div>
   )
 };

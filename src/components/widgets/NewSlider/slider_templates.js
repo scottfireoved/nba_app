@@ -5,7 +5,6 @@ import styles from './slider.css';
 
 const SliderTemplates = (props) => {
 
-    console.log(props.data);
     let template = null;
     const settings = {
         dots: true,

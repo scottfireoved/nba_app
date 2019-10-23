@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './components/Home/home';
+import News from './components/News/news';
 import Layout from './hoc/Layout/layout';
 
 import NewsArticle from './components/Articles/News/Post/index';
@@ -13,6 +14,7 @@ class Routes extends Component {
       <Layout>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/news" exact component={News} />
           <Route path="/articles/:id" exact component={NewsArticle} />
           <Route path="/videos/:id" exact component={VideoArticle} />
         </Switch>

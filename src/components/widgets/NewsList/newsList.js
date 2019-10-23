@@ -6,6 +6,7 @@ import { URL } from '../../../config';
 import styles from './newsList.css';
 import Button from '../Buttons/buttons';
 import CardInfo from '../CardInfo/cardInfo';
+import PicCardInfo from '../PicCardInfo/picCardInfo';
 
 class NewsList extends Component {
     state = {
@@ -66,6 +67,26 @@ class NewsList extends Component {
                                 </Link>
                             </div>
                         </div>
+                    </CSSTransition>
+
+                ));
+                break;
+            case ('pic-card'):
+                template = this.state.items.map((item, i) => (
+                    <CSSTransition classNames={{
+                        enter: styles.newsList_wrapper,
+                        enterActive: styles.newsList_wrapper_enter
+                    }}
+                        timeout={500}
+                        key={i}>
+                        <Link to={`/articles/${item.id}`}>
+                            <div className={styles.flex_wrapper}>
+                                <div className={styles.left}>
+                                    <PicCardInfo teams={this.state.teams} team={item.team} date={item.date} image={item.image} title={item.title} />
+                                </div>
+                            </div>
+                        </Link>
+
                     </CSSTransition>
 
                 ));
